@@ -36,4 +36,13 @@ describe(Contact) do
     end
   end
 
+  describe('#add_number') do
+    it('adds a new phone number with Phone class through the Contact class') do
+      test_contact = Contact.new({:contact_name => "Tyler Brown"})
+      test_number = Phone.new({:phone_number => "503 577 1899"})
+      test_contact.add_number(test_number)
+      expect(test_contact.new_number()).to(eq([test_number]))
+    end
+  end
+
 end

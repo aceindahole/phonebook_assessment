@@ -26,7 +26,7 @@ end
 post('/numbers') do
   @new_number = params.fetch('number')
   @phone_numbers = Phone.new({:phone_number => @new_number})
-  @contacts = Contact.find(params.fetch('artist_id').to_i())
+  @contacts = Contact.find(params.fetch('contact_id').to_i())
   @contacts.add_number(@new_number)
   @phone_numbers = Phone.all()
   erb(:contacts)

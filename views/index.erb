@@ -1,0 +1,21 @@
+<h1 align='center'>Contacts</h1>
+
+<p>Add a contact here!</p>
+
+<form action='contacts' method='post'>
+  <label for='contact'>Contact's name:</label>
+  <input id='contact' name='contact' type='text' required>
+  <br>
+  <button type='submit' class='btn'>Add contact</button>
+</form>
+
+<br><br>
+
+<% if @contacts == [] %>
+  <h4>Why don't you add a friend here?</h4>
+<% else @contacts.each() do |contact| %>
+  <ol>
+    <li><a href='/contacts/<%= contact.id() %>'><%= contact.contact_name() %></a></li>
+  </ol>
+  <% end %>
+<% end %>

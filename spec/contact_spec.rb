@@ -36,6 +36,16 @@ describe(Contact) do
     end
   end
 
+  describe('.find') do
+    it('returns a contact by their id number') do
+      test_contact = Contact.new({:contact_name => "Tyler Brown"})
+      test_contact.save()
+      test_contact2 = Contact.new({:contact_name => "503 577 1899"})
+      test_contact2.save()
+      expect(Contact.find(test_contact2.id())).to(eq(test_contact2))
+    end
+  end
+
   describe('#add_number') do
     it('adds a new phone number with Phone class through the Contact class') do
       test_contact = Contact.new({:contact_name => "Tyler Brown"})

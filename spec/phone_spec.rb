@@ -3,7 +3,10 @@ require('phone')
 require('contact')
 
 describe(Phone) do
-
+  before() do
+    Contact.clear()
+  end
+  
   describe('#phone_number') do
     it('returns the given phone number') do
       test_number = Phone.new({:phone_number => "503 577 1899"})

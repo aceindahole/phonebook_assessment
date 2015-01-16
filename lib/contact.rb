@@ -20,6 +20,14 @@ class Contact
     @@contacts = []
   end
 
+  define_singleton_method(:find) do |identification|
+    @@contacts.each() do |contact|
+      if contact.id() == identification
+        return contact
+      end
+    end
+  end
+
   define_method(:add_number) do |number|
     @new_number.push(number)
   end

@@ -1,0 +1,7 @@
+Here I have created a simple web app to store your various contacts' names, as well as a list of phone numbers or adresses they may have.
+
+The application is very simple. All you have to do is first input the contact's name. That will create a list of clickable links, where you can go to another webpage specific to that contact and enter anything you'd like about them. The input box can take more than just numbers, but letters as well if you want to store an address. If you want to return to a list of all of your contacts, there is a convenient back button at the bottom of the individual contacts page.
+
+Designed by Tyler Brown
+Copyright Tyler Brown Dev Productions
+
